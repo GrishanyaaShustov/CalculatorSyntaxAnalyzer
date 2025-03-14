@@ -7,4 +7,5 @@ include_directories(${CMAKE_SOURCE_DIR}/SyntaxAnalyzer)
 
 add_executable(Calculator main.cpp
         SyntaxAnalyzer/syntaxAnalyzer.cpp
-        SyntaxAnalyzer/syntaxAnalyzer.h)
+        SyntaxAnalyzer/syntaxAnalyzer.h
+        SyntaxAnalyzer/treeNode.h)

@@ -2,10 +2,7 @@
 #include <iostream>
 
 int main() {
-    SyntaxAnalyzer parser;
-    std::string input;
-    std::cout << "Enter expression: ";
-    std::getline(std::cin, input);
-    parser.parse(input);
-    return 0;
+    SyntaxAnalyzer analyzer;
+    analyzer.parse("");  // Пример выражения
+    analyzer.printPolish(analyzer.getRoot());  // Вывод польской записи
 }

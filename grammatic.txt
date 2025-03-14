@@ -2,7 +2,7 @@
 
 <LogicalAnd> ::= <Comparison> { "&" <Comparison> }
 
-<Comparison> ::= <Sum> { ("==" | "!=" | "<" | "<=" | ">" | ">=") <Sum> }
+<Comparison> ::= <Sum> { ("=" | "!=" | "<" | "<=" | ">" | ">=") <Sum> }
 
 <Sum> ::= <Product> { ("+" | "-") <Product> }
 
