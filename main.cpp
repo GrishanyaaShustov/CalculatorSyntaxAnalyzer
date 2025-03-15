@@ -1,8 +1,6 @@
-#include "syntaxAnalyzer.h"
-#include <iostream>
+#include "buildMain.h"
 
 int main() {
-    SyntaxAnalyzer analyzer;
-    analyzer.parse("");  // Пример выражения
-    analyzer.printPolish(analyzer.getRoot());  // Вывод польской записи
+    runCalculator();
+    return 0;
 }

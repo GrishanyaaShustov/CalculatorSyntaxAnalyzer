@@ -4,8 +4,13 @@ project(Calculator)
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(${CMAKE_SOURCE_DIR}/SyntaxAnalyzer)
+include_directories(${CMAKE_SOURCE_DIR}/Calculator)
 
 add_executable(Calculator main.cpp
         SyntaxAnalyzer/syntaxAnalyzer.cpp
         SyntaxAnalyzer/syntaxAnalyzer.h
-        SyntaxAnalyzer/treeNode.h)
+        SyntaxAnalyzer/treeNode.h
+        Calculator/Calculator.cpp
+        Calculator/Calculator.h
+        buildMain.cpp
+        buildMain.h)
