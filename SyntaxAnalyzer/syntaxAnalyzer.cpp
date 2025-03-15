@@ -34,9 +34,18 @@ void SyntaxAnalyzer::comparison() {
     while (currentSymbol == '=' || currentSymbol == '!' || currentSymbol == '<' || currentSymbol == '>') {
         char op = currentSymbol;
         nextSymbol();
-        if (op == '=' || op == '!') {
-            if (currentSymbol == '=') nextSymbol();
-            else error("The '=' character was expected after " + std::string(1, op));
+        // "!="
+        if (op == '!') {
+            if (currentSymbol == '=') {
+                nextSymbol();
+            } else {
+                error("The '=' character was expected after " + std::string(1, op));
+            }
+        }
+        else if (op == '<' || op == '>') {
+            if (currentSymbol == '=') {
+                nextSymbol();
+            }
         }
         sum();
     }
